@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+</head>
+<body>
+
+
+
+
+      <a class="{% if 'navbar' == 'about' %} two {% endif %}" href="{% url 'students:about'%}">about</a>
+      <a class="{% if 'navbar' == 'classes' %} two {% endif %}" href="{% url 'students:classes' %}">classes</a>
+      <a class="{% if 'navbar' == 'contact' %} two {% endif %}" href="{% url 'students:contact' %}">contact</a>
+      <a class="{% if 'navbar' == 'add' %} two {% endif %}" href="{% url 'students:add' %}">Add</a>
+
+{% block body %}
+
+{% endblock %}
+
+</body>
+</html>
